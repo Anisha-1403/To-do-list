@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --item-bg: #f3f3f3;
+}
+
+body.dark {
+    --bg-color: #1e1e2f;
+    --text-color: #eee;
+    --item-bg: #2a2a3d;
+    background: linear-gradient(to right, #1e1e2f, #2a2a3d);
+}
+
+body {
+    background: linear-gradient(to right, #ff6b6b, #f06595);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.todo-box {
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.todo-box h2 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-theme {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    background: var(--item-bg);
+    color: var(--text-color);
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding: 12px 40px 12px 45px;
+    background: var(--item-bg);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    user-select: none;
+    color: var(--text-color);
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ddd;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #ccc;
+}
+
+ul li.checked::before {
+    background: #ff6b6b;
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ul li .priority-tag {
+    right: 35px;
+    /* space from delete icon */
+}
+
+ul li .delete {
+    right: 10px;
+}
+
+.priority-tag {
+    margin-left: 10px;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.priority-Low {
+    background-color: #2ec4b6;
+}
+
+.priority-Medium {
+    background-color: #f4a261;
+}
+
+.priority-High {
+    background-color: #e63946;
+}
+
+.due-date {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}
+  
+.todo-box {
+    overflow: hidden;
+  }
+  

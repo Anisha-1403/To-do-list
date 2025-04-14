@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo-box">
+      <h2>To-Do List <img src="https://img.icons8.com/emoji/24/000000/check-mark-emoji.png"/></h2>
+      
+      <div class="toggle-theme">
+        <label>
+          <input type="checkbox" id="theme-toggle" />
+          <span>🌙</span>
+        </label>
+      </div>
+
+      <div class="input-container">
+        <input type="text" id="task-input" placeholder="Add your text" />
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input type="date" id="dueDate" />
+        <button onclick="addTask()">Add</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
